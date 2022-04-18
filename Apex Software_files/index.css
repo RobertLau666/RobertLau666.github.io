@@ -18,7 +18,6 @@
 .Customers{display:grid;grid-template-columns:repeat(4,1fr);column-gap:4rem;row-gap:6rem}
 .Customers.customer{display:flex;justify-content:center;align-items:center}
 .Customers
-
 .customer>img{max-width:30px}
 @media screen and (max-width:800px){.Customers{grid-template-columns:repeat(3,1fr);column-gap:2rem}}
 @media screen and (max-width:600px){.Customers{grid-template-columns:repeat(2,1fr)}}
