@@ -18,7 +18,7 @@
 .Customers{display:grid;grid-template-columns:repeat(4,1fr);column-gap:4rem;row-gap:6rem}
 .Customers.customer{display:flex;justify-content:center;align-items:center}
 .Customers
-.customer>img{max-width:30px}
+.customer>img{max-width:40px}
 @media screen and (max-width:800px){.Customers{grid-template-columns:repeat(3,1fr);column-gap:2rem}}
 @media screen and (max-width:600px){.Customers{grid-template-columns:repeat(2,1fr)}}
 .Documentation{display:grid;grid-template-columns:200px 1fr 200px;max-width:1125px;margin:0 auto}.Documentation>
