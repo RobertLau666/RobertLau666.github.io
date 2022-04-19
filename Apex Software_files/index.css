@@ -16,9 +16,9 @@
 .columns-3{grid-template-columns:repeat(3,1fr);column-gap:4rem;row-gap:3rem}@media screen and (max-width:800px){.columns-3{grid-template-columns:repeat(2,1fr)}}@media screen and (max-width:600px){.columns-3{grid-template-columns:1fr}}
 
 .Customers{display:grid;grid-template-columns:repeat(4,1fr);column-gap:4rem;row-gap:6rem}
-.Customers.customer{display:flex;justify-content:center;align-items:center}
+.Customers.customer{display:flex;justify-content:center;align-items:center;}
 .Customers
-.customer>img{max-width:25px;max-height: 25px;}
+.customer>img{max-width:21px;max-height: 21px;}
 /* @media screen and (max-width:100px){.Customers{grid-template-columns:repeat(3,1fr);column-gap:20rem}} */
 @media screen and (max-width:100px){.Customers{grid-template-columns:repeat(2,1fr)}}
 .Documentation{display:grid;grid-template-columns:200px 1fr 200px;max-width:1125px;margin:0 auto}.Documentation>
@@ -51,12 +51,14 @@
     /*设置内容由显示变为隐藏*/
     0% {
         opacity: 0;
+        font-size: 0.7em;
     }
     /* 50% {
         opacity: 0;
     } */
     100% {
         opacity: 1;
+        font-size: 1em;
     }
 }
 @-moz-keyframes fadeio {
@@ -96,7 +98,7 @@
     }
 }
 .fadenum {
-    animation: fadeio 3s; /*infinite
+    animation: fadeio 2.6s; /*infinite
     /* -webkit-animation: fadeio 2s infinite;
     -moz-animation: fadeio 2s infinite;
     -o-animation: fadeio 2s infinite; */
