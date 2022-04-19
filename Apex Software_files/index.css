@@ -18,7 +18,7 @@
 .Customers{display:grid;grid-template-columns:repeat(4,1fr);column-gap:4rem;row-gap:6rem}
 .Customers.customer{display:flex;justify-content:center;align-items:center}
 .Customers
-.customer>img{max-width:30px;max-height: 30px;}
+.customer>img{max-width:25px;max-height: 25px;}
 /* @media screen and (max-width:100px){.Customers{grid-template-columns:repeat(3,1fr);column-gap:20rem}} */
 @media screen and (max-width:100px){.Customers{grid-template-columns:repeat(2,1fr)}}
 .Documentation{display:grid;grid-template-columns:200px 1fr 200px;max-width:1125px;margin:0 auto}.Documentation>
@@ -32,7 +32,7 @@
 .Section.top{margin-top:0}
 .Section.button{margin-top:3rem}
 .Section>
-
+/* ;margin-bottom:1500rem; */
 
 .subtitle{
     letter-spacing:-.016em;
@@ -41,3 +41,63 @@
     font-weight:700;
     cursor:default}@keyframes show-section{0%{opacity:0;transform:translateY(-2rem)}to{opacity:1;transform:translateY(0)}}@keyframes show-section-image{0%{opacity:0;transform:translateY(-2rem)}to{opacity:1;transform:translateY(0)}}
 .Subscribe{--ease:cubic-bezier(0.075,0.82,0.165,1.15);display:inline-flex;align-items:center;font-size:.875rem;color:var(--primary-7);border:1px solid var(--neutral-1);padding:12px 22px;border-radius:1px;user-select:none;cursor:pointer;position:relative}.Subscribe>svg{margin-right:.5rem;transform:scale(.85)}.Subscribe:hover{color:var(--primary-5);border-color:var(--neutral-3)}.Subscribe:active{color:var(--primary-8);background:var(--primary-0)}.Subscribe .content.show,.Subscribe:hover .content{display:block}.Subscribe .content{position:absolute;display:none;top:-.25rem;left:-.25rem;background:#fff;z-index:25;padding:1rem;box-shadow:var(--shadow-1);will-change:opacity;animation:subscribe-hover .3s forwards var(--ease);border-radius:2px}@keyframes subscribe-hover{0%{transform:translateY(-1.5rem);opacity:0}to{transform:translateY(0);opacity:1}}.Subscribe a{display:flex;color:inherit;align-items:center;text-decoration:none;height:2rem;border-radius:3px;margin-top:1px;padding:0 .75rem;white-space:nowrap}.Subscribe a:hover{background:var(--neutral-0)}.Subscribe a:active{background:var(--neutral-1)}.Subscribe a svg{margin-right:.5rem;flex:0 0 auto}.Subscribe .content[data-show-email] a,.Subscribe .email{display:none}.Subscribe .content[data-show-email] .email{display:block;animation:subscribe-hover .3s forwards var(--ease)}.Subscribe .email form{display:flex}.title-1,.title-2,.title-3,.title-4,.title-5,.title-6,h1,h2,h3,h4,h5,h6{letter-spacing:-.016em;line-height:1.25;font-weight:700;color:#101010;cursor:default}.title-1,h1{font-size:4rem}.title-2,h2{font-size:3.5rem}.title-3,h3{font-size:3rem}.title-4,h4{font-size:2.5rem}.title-5,h5{font-size:2rem}.title-6,h6{font-size:1rem}p{letter-spacing:.004em;font-weight:400;font-size:1.25rem;line-height:1.6;color:#121212}p.small{font-size:17px}p.tiny{font-size:14px}
+
+
+
+
+
+
+@keyframes fadeio {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 0;
+    }
+    /* 50% {
+        opacity: 0;
+    } */
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeio {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeio {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeio {
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fadenum {
+    animation: fadeio 3s; /*infinite
+    /* -webkit-animation: fadeio 2s infinite;
+    -moz-animation: fadeio 2s infinite;
+    -o-animation: fadeio 2s infinite; */
+}
