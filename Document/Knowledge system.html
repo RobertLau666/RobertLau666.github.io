@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0026)https://apex.sh/docs/ping/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Knowledge system — Documentation</title>
+  <title>Knowledge system</title>
   
     <meta name="description" content="Create alerts to receive notifications for downtime and performance issues.">
   
@@ -54,176 +54,96 @@
 
 <body>
   <header>
-    <div class="Logo">Docs</div>
+    <div class="Logo">Knowledge system</div>
     
-<div class="Menu" onclick="">Explore
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-    <div class="content">
-      <div class="container">
-        <div class="products">
-          <ul>
-            <li><a href="https://apex.sh/ping/"><span class="name">Ping</span><span class="description">Uptime and performance
-                  monitoring.</span></a></li>
-            <li><a href="https://apex.sh/logs/"><span class="name">Logs</span><span class="description">Structured log management at scale.</span></a></li>
-            <li><a href="https://apex.sh/up/"><span class="name">Up</span><span class="description">Serverless applications and
-                  APIs.</span></a></li>
-          </ul>
-        </div>
-        <div class="links">
-          <ul>
-            <li><a href="https://apex.sh/">Home</a></li>
-            
-              <li><a href="https://apex.sh/docs/">Documentation</a></li>
-            
-            <li><a href="mailto:hello@apex.sh">Support</a></li>
-            <li><a href="https://apex.sh/blog/">Blog</a></li>
-          </ul>
+    <div class="Menu" onclick="">Start
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+      <div class="content">
+        <div class="container">
+          <div>
+          </div>
+          <div class="products">
+            <ul>
+              <li><a href="../index.html"><span class="name">Home</span></a></li>
+              <li><a href="../Document.html"><span class="name">Document</span></a></li>
+              <li><a href="../Blog.html"><span class="name">Blog</span></a></li>
+              <li><a href="../About me.html"><span class="name">About me</span></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   </header>
 
   <div class="mb-30">
     <div class="Documentation">
       <div class="doc-nav">
-        
-  <div class="Navigation left large">
-    
-    
-    
-      
-      
-      
-        
-      
-      
-        
-          <a href="https://apex.sh/docs/ping/" class="expandable item active">Alerting</a>
-        
-      
-    
-      
-      
-      
-      
-        
+        <div class="Navigation left large">
+          <a href="https://apex.sh/docs/ping/" class="expandable item active">
+            Alerting
+          </a>
+
           <a href="https://apex.sh/docs/ping/billing/" class="expandable item">
             <span>Billing</span>
           </a>
-        
-      
-    
-      
-      
-      
-      
-        
+
           <a href="https://apex.sh/docs/ping/monitoring/" class="expandable item">
             <span>Checks</span>
           </a>
-        
-      
-    
-      
-      
-      
-      
-        
+
           <a href="https://apex.sh/docs/ping/ssl/" class="expandable item">
             <span>SSL expiration</span>
           </a>
-        
-      
-    
-      
-      
-      
-      
-        
+
           <a href="https://apex.sh/docs/ping/status-pages/" class="expandable item">
             <span>Status pages</span>
           </a>
-        
-      
-    
-      
-      
-      
-      
-        
+
           <a href="https://apex.sh/docs/ping/teams/" class="expandable item">
             <span>Team management</span>
           </a>
-        
-      
-    
-      
-      
-      
-      
-        
+
           <a href="https://apex.sh/docs/ping/apdex/" class="expandable item">
             <span>Understanding Apdex</span>
           </a>
-        
-      
-    
-      
-      
-      
-      
-        
+
           <a href="https://apex.sh/docs/ping/webhooks/" class="expandable item">
             <span>Webhooks</span>
           </a>
-        
-      
-    
-      
-      
-      
-      
-        
+
           <a href="https://apex.sh/docs/ping/reporting/" class="expandable item">
             <span>Weekly reporting</span>
           </a>
-        
-      
-    
-  </div>
-
+        </div>
       </div>
 
       <div class="content">
         <h1 class="Heading">Alerting</h1>
         <div class="Markdown">
           <p>This guide walks through the creation of alerts, which are used to notify your team of downtime and performance issues.</p>
-
-<h2 class="Heading"><a class="Anchor" aria-hidden="true" id="creating_an_alert" href="https://apex.sh/docs/ping/#creating_an_alert">
-	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-</a>Creating an alert</h2>
-
-<p>Click the plus symbol on the page to view the alert creation form. Select the type of action to perform from Slack, PagerDuty, webhook request, or email as shown here:</p>
-
-<div class="Image">
-  <img alt="Alert actions" src="./Knowledge system/action.png">
-</div>
-
-<p>Slack and PagerDuty integrations will redirect you to the corresponding site to integrate, while webhooks require a value, in this example the email(s) you’d like to notify:</p>
-
-<div class="Image">
-  <img alt="Multiple emails" src="./Knowledge system/emails.png">
-</div>
-
-<p>Choose if the alert applies to every check, or a single check.</p>
-
-<div class="Image">
-  <img alt="Check selection" src="./Knowledge system/checklist.png">
-</div>
+          <h2 class="Heading"><a class="Anchor" aria-hidden="true" id="creating_an_alert" href="https://apex.sh/docs/ping/#creating_an_alert">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          </a>Creating an alert</h2>
+          <p>Click the plus symbol on the page to view the alert creation form. Select the type of action to perform from Slack, PagerDuty, webhook request, or email as shown here:</p>
+          
+          <div class="Image">
+            <img alt="Alert actions" src="./Knowledge system/action.png">
+          </div>
+          
+          <p>Slack and PagerDuty integrations will redirect you to the corresponding site to integrate, while webhooks require a value, in this example the email(s) you’d like to notify:</p>
+          
+          <div class="Image">
+            <img alt="Multiple emails" src="./Knowledge system/emails.png">
+          </div>
+          
+          <p>Choose if the alert applies to every check, or a single check.</p>
+          
+          <div class="Image">
+            <img alt="Check selection" src="./Knowledge system/checklist.png">
+          </div>
 
 <p>Select a metric to alert on, if your only concern is that the website, API, or application is up then select “Downtime”. You may wish to report on unresponsive endpoints using “Total Response Time” as well.</p>
 
@@ -294,136 +214,62 @@
         </div>
 
         <div class="flex mt-24">
-          
-
-          
             <a class="PageLink next" href="https://apex.sh/docs/ping/billing/">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               <div class="info">
                 <div class="direction">Next</div>
                 <div class="name">Billing</div>
               </div>
-            </a>
-          
+            </a>          
         </div>
       </div>
 
       <div class="page-nav">
         
-  <div class="Navigation right small">
-    <div class="contents">
-      <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" class="icon"><g><line x1="21" y1="10" x2="7" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="7" y2="18"></line></g></svg>
-      <span>contents</span>
+    <div class="Navigation right small">
+      <div class="contents">
+        <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" class="icon"><g><line x1="21" y1="10" x2="7" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="7" y2="18"></line></g></svg>
+        <span>contents</span>
+      </div>
+
+      <a class="item" href="https://apex.sh/docs/ping/#creating_an_alert">
+        Creating an alert
+      </a>
+
+      <a class="item" href="https://apex.sh/docs/ping/#types_of_alerts">
+        Types of alerts
+      </a>
+      
+      <a class="item" href="https://apex.sh/docs/ping/#reducing_noise_from_alerts">
+        Reducing noise from alerts
+      </a>
+            
+      <a class="item" href="https://apex.sh/docs/ping/#how_downtime_confirmation_works">
+        How downtime confirmation works
+      </a>
+
+      <a class="item" href="https://apex.sh/docs/ping/#alert_email_delivery">
+        Alert email delivery
+      </a>
     </div>
-    
-    
-    
-      
-      
-      
-        
-      
-      
-        
-          
-            <a class="item" href="https://apex.sh/docs/ping/#creating_an_alert">
-	
-Creating an alert</a>
-          
-            <a class="item" href="https://apex.sh/docs/ping/#types_of_alerts">
-	
-Types of alerts</a>
-          
-            <a class="item" href="https://apex.sh/docs/ping/#reducing_noise_from_alerts">
-	
-Reducing noise from alerts</a>
-          
-            <a class="item" href="https://apex.sh/docs/ping/#how_downtime_confirmation_works">
-	
-How downtime confirmation works</a>
-          
-            <a class="item" href="https://apex.sh/docs/ping/#alert_email_delivery">
-	
-Alert email delivery</a>
-          
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
-      
-      
-      
-      
-        
-      
-    
+
+  </div>
   </div>
 
-      </div>
-    </div>
-
-    
-<footer>
-  <a href="mailto:hello@apex.sh">Contact</a>
-  <a href="http://status.apex.sh/">Status</a>
-  <a href="https://chat.apex.sh/">Slack</a>
-  <a href="https://twitter.com/tjholowaychuk">Twitter</a>
-  <a href="https://apex.sh/terms/">Terms</a>
-  <a href="https://apex.sh/privacy/">Privacy</a>
-</footer>
+  
+  <footer>
+    <a href="mailto:hello@apex.sh">Contact</a>
+    <a href="http://status.apex.sh/">Status</a>
+    <a href="https://chat.apex.sh/">Slack</a>
+    <a href="https://twitter.com/tjholowaychuk">Twitter</a>
+    <a href="https://apex.sh/terms/">Terms</a>
+    <a href="https://apex.sh/privacy/">Privacy</a>
+  </footer>
 
   </div>
 
   
-  <script importance="low" src="./Knowledge system/index.js.下载"></script>
+  <script importance="low" src="./Knowledge system/index.js"></script>
 
 
 </body></html>
