@@ -50,6 +50,24 @@
     <link rel="stylesheet" type="text/css" href="./Knowledge system/index.css">
     <link rel="prefetch">
 
+    <!-- <script>
+      function f(){
+
+      var sub_menu = document.getElementById("1");
+
+      var dis_v = sub_menu.style.display;
+
+      if(dis_v == "none")
+
+      sub_menu.style.display = "block";
+
+      else
+
+      sub_menu.style.display = "none";
+
+      }
+
+    </script> -->
 
   </head>
 
@@ -82,10 +100,10 @@
     <div class="mb-30">
       <div class="Documentation">
         <div class="doc-nav">
-          <div class="Navigation left large">
+          <div class="Navigation left large a">
             <ul>
               <li>
-                <a href="#Alerting" class="expandable item active">一</a>
+                <a id="1" href="#Alerting" class="expandable item active" onclick="f()">一</a>
                 <ul class="menu-sub">
                   <li><a href="#creating_an_alert" class="item">1</a></li>
                   <li><a href="#reducing_noise_from_alerts" class="item">2</a></li>
@@ -246,7 +264,6 @@
     
     <script importance="low" src="./Knowledge system/index.js"></script>
 
-    
 
   </body>
 </html>
