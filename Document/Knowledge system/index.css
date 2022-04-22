@@ -3,7 +3,7 @@ li{
 }
 .menu-sub{
     margin-left:20px;
-    display: none;
+    /* display: none; */
 }
 .sidebar.sidebar-link.current {
     font-weight: 600;

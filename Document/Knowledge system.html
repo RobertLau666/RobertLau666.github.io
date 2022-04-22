@@ -61,6 +61,18 @@
         else
         sub_menu.style.display = "none";
       }
+      function fb()
+      {      
+        var last_sub_menu;
+        var sub_menu=document.getElementById("一");
+        if (sub_menu!=last_sub_menu)
+        {
+          sub_menu.style.fontFamily="黑体";
+          last_sub_menu.style.fontFamily="not specified"
+          last_sub_menu=sub_menu;
+        }
+
+      }
     </script>
 
   </head>
@@ -96,15 +108,15 @@
         <div class="doc-nav">
           <div class="Navigation left large a">
             <ul>
-              <li><a href="#Alerting" class="expandable item active" onclick="f('1')">一</a>
-                <ul id="1" class="menu-sub">
+              <li><a id="一" href="#Alerting" class="expandable item active" onclick="f('1'),fb()">一</a>
+                <ul id="1" class="menu-sub" style="display:none">
                   <li><a href="#creating_an_alert" class="item">1</a></li>
                   <li><a href="#reducing_noise_from_alerts" class="item">2</a></li>
                   <li><a href="#" class="item">3</a></li>
                 </ul>
               </li>
               <li><a href="#Alerting" class="expandable item" onclick="f('2')">二</a>
-                <ul id="2" class="menu-sub">
+                <ul id="2" class="menu-sub" style="display:none">
                   <li><a href="#creating_an_alert" class="item">1</a></li>
                   <li><a href="#reducing_noise_from_alerts" class="item">2</a></li>
                   <li><a href="#" class="item">3</a></li>
