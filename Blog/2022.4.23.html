@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://apex.sh/blog/post/pre-render-wget/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Pre-rendering static websites with wget —&nbsp;Apex Software</title>
+  <meta name="description" content="Learn how to pre-render static websites created with any web framework, using the 23 year-old wget command-line tool. The entire Apex Software website and blog are pre-rendering using this simple technique.">
+
+  
+  <meta property="og:title" content="Pre-rendering static websites with wget">
+  <meta property="og:url" content="https://apex.sh/blog/post/pre-render-wget/">
+  <meta property="og:description" content="Learn how to pre-render static websites created with any web framework, using the 23 year-old wget command-line tool. The entire Apex Software website and blog are pre-rendering using this simple technique.">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1998">
+  <meta property="og:image:height" content="1894">
+  <meta property="og:image" content="https://apex-software.imgix.net/apex/marketing/cards/dark-type.png?auto=format&amp;w=800&amp;dpr=2">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tjholowaychuk">
+  <meta name="twitter:title" content="Pre-rendering static websites with wget">
+  <meta name="twitter:description" content="Learn how to pre-render static websites created with any web framework, using the 23 year-old wget command-line tool. The entire Apex Software website and blog are pre-rendering using this simple technique.">
+  <meta name="twitter:image" content="https://apex-software.imgix.net/apex/marketing/cards/dark-type.png?auto=format&amp;w=800&amp;dpr=2">
+  
+  
+  
+  
+  <link href="https://apex.sh/blog/post/pre-render-wget/" rel="canonical">
+  <link rel="preconnect" href="https://apex-software.imgix.net/">
+
+  
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="57x57" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=57">
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="114x114" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=114">
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="72x72" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=72">
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="144x144" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=144">
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="60x60" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=60">
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="120x120" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=120">
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="76x76" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=76">
+  <link rel="apple-touch-icon-precomposed" importance="low" sizes="152x152" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=152">
+  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=196" importance="low" sizes="196x196">
+  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=96" importance="low" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/32.png" importance="low" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/16.png" importance="low" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=128" importance="low" sizes="128x128">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+<link rel="prefetch"></head>
+
+<body>
+  <header>
+    <div class="Logo">Blog</div>
+    
+    <div class="Menu" onclick="">Start
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+      <div class="content">
+        <div class="container">
+          <div>
+          </div>
+          <div class="products">
+            <ul>
+              <li><a href="index.html"><span class="name">Home</span></a></li>
+              <li><a href="Document.html"><span class="name">Document</span></a></li>
+              <li><a href="Blog.html"><span class="name">Blog</span></a></li>
+              <li><a href="About me.html"><span class="name">About me</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="container-1 mb-30">
+    <div class="content">
+      
+      <div class="text-2 weight-6">2022.4.23</div>
+      <h1 class="title-3 mt-4">这是第一条blog</h1>
+      <div class="Markdown">
+        <p>以后再说</p>
+        <p>In this short article, I’ll give you an example of how you can utilize any HTTP framework you like to create a website, and then pre-render it as a static site using the 23 year-old command-line program <code>wget</code>.</p>
+
+<p>When I started to build the new website I had a few simple requirements in mind: I wanted the website layout to facilitate a wide variety of products — placing an emphasis on the content and typography, the site must load as quickly as possible, and finally, I wanted to avoid bloated solutions. That’s why I decided to skip all the fancy solutions and go straight to good-old HTML templates.</p>
+
+<h2 class="Heading"><a class="Anchor" aria-hidden="true" id="building_the_website" href="https://apex.sh/blog/post/pre-render-wget/#building_the_website">
+	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+</a>Building the website</h2>
+
+<p>As I mentioned, with the use of pre-rendering you can use any framework you want to create the website. It’s worth noting that the performance of your web server or framework is not very important here, since it’s only a compile-time cost, and pages can be copied in parallel.</p>
+
+<p>To show you an example I’m going to use Go’s standard library here to create a small blog server which reads content and templates from disk. Its structure is this:</p>
+
+<pre><code>website
+├── content
+│   ├── post-a.md
+│   ├── post-b.md
+│   └── post-c.md
+├── main.go
+└── templates
+    ├── post.html
+    └── posts.html
+</code></pre>
+
+<p>I won’t go into details about this code since it’s not a Go article, but to illustrate that any web framework or language can be used for this, here’s the <code>main.go</code> implementation. It serves a listing of blog posts from <code>/</code>, and the contents of each post at <code>/blog/&lt;slug&gt;</code>.</p>
+
+<pre><code class="language-go">package main
+
+import (
+  "html/template"
+  "io/ioutil"
+  "log"
+  "net/http"
+  "path/filepath"
+  "strings"
+)
+
+type Post struct {
+  Slug    string
+  Content template.HTML
+}
+
+func main() {
+  t, err := template.ParseGlob("templates/*.html")
+  if err != nil {
+    log.Fatalf("error parsing templates: %s\n", err)
+  }
+
+  http.HandleFunc("/", posts(t))
+  http.Handle("/blog/", http.StripPrefix("/blog/", http.HandlerFunc(post(t))))
+  log.Fatal(http.ListenAndServe(":3000", nil))
+}
+
+// posts renders a list of blog posts.
+func posts(templates *template.Template) http.HandlerFunc {
+  return func(w http.ResponseWriter, r *http.Request) {
+    files, err := ioutil.ReadDir("content")
+    if err != nil {
+      http.Error(w, "Error listing files", http.StatusInternalServerError)
+      return
+    }
+
+    var posts []Post
+
+    for _, f := range files {
+      b, err := ioutil.ReadFile(filepath.Join("content", f.Name()))
+      if err != nil {
+        http.Error(w, "Error reading file", http.StatusInternalServerError)
+        return
+      }
+
+      posts = append(posts, Post{
+        Slug:    strings.TrimSuffix(f.Name(), ".md"),
+        Content: template.HTML(b),
+      })
+    }
+
+    templates.ExecuteTemplate(w, "posts.html", struct {
+      Posts []Post
+    }{
+      Posts: posts,
+    })
+  }
+}
+
+// post renders a blog post.
+func post(templates *template.Template) http.HandlerFunc {
+  return func(w http.ResponseWriter, r *http.Request) {
+    slug := r.URL.Path
+
+    b, err := ioutil.ReadFile(filepath.Join("content", slug+".md"))
+    if err != nil {
+      http.Error(w, "Error reading file", http.StatusInternalServerError)
+      return
+    }
+
+    post := Post{
+      Slug:    slug,
+      Content: template.HTML(b),
+    }
+
+    templates.ExecuteTemplate(w, "post.html", struct {
+      Post
+    }{
+      Post: post,
+    })
+  }
+}
+</code></pre>
+
+<h2 class="Heading"><a class="Anchor" aria-hidden="true" id="css_minification" href="https://apex.sh/blog/post/pre-render-wget/#css_minification">
+	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+</a>CSS minification</h2>
+
+<p>Modern browsers allow you to import CSS files from within CSS, using the <code>@import &lt;url&gt;</code> rule. For the Apex website I have a single <code>index.css</code> which is included within each page, it in turn imports many other styles, something like this:</p>
+
+<pre><code class="language-css">@import "./Button.css";
+@import "./Customers.css";
+@import "./Documentation.css";
+@import "./Features.css";
+@import "./Help.css";
+@import "./Highlights.css";
+@import "./Image.css";
+@import "./Logo.css";
+@import "./Menu.css";
+@import "./Navigation.css";
+@import "./Pricing.css";
+@import "./Question.css";
+@import "./Section.css";
+...
+</code></pre>
+
+<p>This is great during development since you don’t need anything but a browser, however, in production, there’s a cost for sending potentially dozens of requests to fetch each stylesheet —&nbsp;so you should typically aggregate and minify them. To perform the production build I went with the popular <a href="https://postcss.org/">PostCSS</a>, along with <a href="https://cssnano.co/">CSSNano</a> for minification, and this configuration:</p>
+
+<pre><code class="language-js">const atImport = require('postcss-import')
+const nano = require('cssnano')
+
+module.exports = {
+  plugins: [
+    atImport(),
+    nano({ preset: 'default' })
+  ]
+}
+</code></pre>
+
+<p>Now onto the pre-rendering!</p>
+
+<h2 class="Heading"><a class="Anchor" aria-hidden="true" id="pre_rendering_the_static_site" href="https://apex.sh/blog/post/pre-render-wget/#pre_rendering_the_static_site">
+	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+</a>Pre-rendering the static site</h2>
+
+<p>The pre-rendering step utilizes <code>wget</code> to crawl your dynamic site, outputting static HTML representations of each page. You may have seen people achieve this with a more complex headless Chrome-based solution, but for many sites, this will be perfectly fine!</p>
+
+<p>The <code>wget</code> command is similar to curl, however, it was designed for crawling and copying websites. Let’s take a look at the command, first we use <code>-P</code> to specify the output directory — <code>./build</code> in this case, followed by <code>-nv</code> for “non-verbose” mode which outputs less information, <code>-r</code> which crawls and downloads recursively, and finally <code>-E</code> which adds the <code>.html</code> extension to files saved.</p>
+
+<p>Note that the webserver should be running first, so that wget has something to “crawl”, let’s try it out:</p>
+
+<pre><code>$ go run main.go &amp;
+$ wget -P build -nv -nH -r -E localhost:3000
+</code></pre>
+
+<p>You should see some output which looks similar to the following, showing that <code>wget</code> has crawled the blost listing and post pages, creating their HTML file counterparts in the build directory:</p>
+
+<pre><code>2019-08-20 16:21:59 URL:http://localhost:3000/ [281/281] -&gt; "build/index.html" [1]
+2019-08-20 16:21:59 URL:http://localhost:3000/blog/post-a [22/22] -&gt; "build/blog/post-a.html" [1]
+2019-08-20 16:21:59 URL:http://localhost:3000/blog/post-b [22/22] -&gt; "build/blog/post-b.html" [1]
+2019-08-20 16:21:59 URL:http://localhost:3000/blog/post-c [22/22] -&gt; "build/blog/post-c.html" [1]
+FINISHED --2019-08-20 16:21:59--
+Total wall clock time: 0.01s
+Downloaded: 4 files, 628 in 0s (18.1 MB/s)
+</code></pre>
+
+<p>With any luck you’ll now see the output in your build directory —&nbsp;a complete copy of your website, now static.</p>
+
+<pre><code>build
+├── blog
+│   ├── post-a.html
+│   ├── post-b.html
+│   └── post-c.html
+└── index.html
+</code></pre>
+
+<p>Even the blog’s <a href="https://apex.sh/blog/feed.rss">RSS feed</a> is generated using the same technique, your mileage may vary depending on the requirements, but I’m pretty happy with this simple solution!</p>
+
+<hr>
+
+<p>I have some ideas for what could make static websites much more enjoyable to write, if you’re interested consider <a href="https://github.com/users/tj/sponsorship">sponsoring my work on Github</a>.</p>
+
+      </div>
+    </div>
+
+    <div class="mt-20"></div>
+    
+  <!-- <div class="Subscribe" onclick="">
+    <svg version="1.1" id="Layer_1" width="14px" height="14px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 405.338 405.338" style="enable-background:new 0 0 405.338 405.338;" xml:space="preserve">
+    <g>
+    <path style="fill:currentColor;" d="M405.336,405.333h-86.848c0-175.612-142.874-318.477-318.485-318.477V0
+    C223.512,0,405.336,181.828,405.336,405.333z"></path>
+    <path style="fill:currentColor;" d="M256.053,405.333h-86.861c0-93.295-75.891-169.19-169.19-169.19v-86.852
+    C141.195,149.291,256.053,264.141,256.053,405.333z"></path>
+    <circle style="fill:currentColor;" cx="48.86" cy="356.48" r="48.858"></circle>
+    </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+    </svg>
+    Subscribe
+    <div class="content">
+      <a href="https://apex.sh/blog/post/pre-render-wget/#" id="subscribe-email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Subscribe with email
+      </a>
+      <a href="https://apex.sh/blog/feed.rss" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+        Subscribe with RSS
+      </a>
+
+      <div class="email">
+        <form action="https://news.apex.sh/subscribe">
+          <input name="newsletter" type="hidden" value="blog">
+          <input name="email" class="Input" type="text" placeholder="Your email address">
+          <button class="Button dark ml-2">Join</button>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+
+    
+<footer>
+  <!-- <a href="mailto:hello@apex.sh">Contact</a>
+  <a href="http://status.apex.sh/">Status</a>
+  <a href="https://chat.apex.sh/">Slack</a>
+  <a href="https://twitter.com/tjholowaychuk">Twitter</a>
+  <a href="https://apex.sh/terms/">Terms</a>
+  <a href="https://apex.sh/privacy/">Privacy</a> -->
+</footer>
+
+  </div>
+
+  
+  <script importance="low" src="index.js"></script>
+
+
+
+</body><div></div></html>
