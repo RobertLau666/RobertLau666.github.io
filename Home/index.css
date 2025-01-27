@@ -3121,7 +3121,7 @@ p {
 
 .container-2 {
     width: 75%;
-    min-height: 100vh;
+    min-height: 0vh;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto
@@ -3186,24 +3186,19 @@ p {
     row-gap: 6rem
 }
 
-.Customers .customer {
+.Customers.customer {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .Customers .customer>img {
-    max-width: 100px
+    max-width: 21px;
+    max-height: 21px;
 }
 
-@media screen and (max-width:800px) {
-    .Customers {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 2rem
-    }
-}
-
-@media screen and (max-width:600px) {
+/* @media screen and (max-width:100px){.Customers{grid-template-columns:repeat(3,1fr);column-gap:20rem}} */
+@media screen and (max-width:100px) {
     .Customers {
         grid-template-columns: repeat(2, 1fr)
     }
@@ -4305,14 +4300,21 @@ td>code {
 }
 
 .Section {
-    margin-top: 16rem
+    margin-top: 15rem
 }
 
 .Section.top {
     margin-top: 0
 }
 
-.Section>.subtitle {
+.Section.button {
+    margin-top: 3rem
+}
+
+.Section>
+/* ;margin-bottom:1500rem; */
+
+.subtitle {
     letter-spacing: -.016em;
     color: var(--neutral-12);
     font-size: 1.15rem;
@@ -4507,3 +4509,114 @@ p.small {
 p.tiny {
     font-size: 14px
 }
+
+
+
+
+
+
+@keyframes fadeio {
+
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 0;
+        font-size: 0.7em;
+        /* letter-spacing: -.5rem;
+        line-height: 1;
+        margin: 0;
+        background: linear-gradient(-45deg,#ffa63d,#ff3d77,#b933f9,#5f19dd);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        margin-bottom: 6rem; */
+    }
+
+    /* 50% {
+        opacity: 0;
+    } */
+    100% {
+        opacity: 1;
+        font-size: 1em;
+        /* font-size: 8rem; */
+        /* letter-spacing: -.5rem;
+        line-height: 1;
+        margin: 0;
+        background: linear-gradient(-45deg,#ffffff,#ffffff,#ffffff,#ffffff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        margin-bottom: 6rem; */
+    }
+}
+
+@-moz-keyframes fadeio {
+
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeio {
+
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeio {
+
+    /*设置内容由显示变为隐藏*/
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadenum {
+    animation: fadeio 2.4s;
+    /*infinite
+    /* -webkit-animation: fadeio 2s infinite;
+    -moz-animation: fadeio 2s infinite;
+    -o-animation: fadeio 2s infinite; */
+}
+
+
+/* .home__available--section h1 {
+    font-size: 8rem;
+    letter-spacing: -.5rem;
+    line-height: 1;
+    margin: 0;
+    background: linear-gradient(-45deg,#ffa63d,#ff3d77,#b933f9,#5f19dd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    margin-bottom: 6rem;
+} */

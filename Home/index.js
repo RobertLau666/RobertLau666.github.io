@@ -33,8 +33,8 @@ function touchstartListener(event) {
     return
   }
 
-  linkElement.addEventListener('touchcancel', touchendAndTouchcancelListener, {passive: true})
-  linkElement.addEventListener('touchend', touchendAndTouchcancelListener, {passive: true})
+  linkElement.addEventListener('touchcancel', touchendAndTouchcancelListener, { passive: true })
+  linkElement.addEventListener('touchend', touchendAndTouchcancelListener, { passive: true })
 
   urlToPreload = linkElement.href
   preload(linkElement.href)
@@ -56,7 +56,7 @@ function mouseoverListener(event) {
     return
   }
 
-  linkElement.addEventListener('mouseout', mouseoutListener, {passive: true})
+  linkElement.addEventListener('mouseout', mouseoutListener, { passive: true })
 
   urlToPreload = linkElement.href
 
