@@ -1,334 +1,212 @@
 <!DOCTYPE html>
-<html>
+<!-- saved from url=(0016)https://apex.sh/ -->
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Tools</title>
+<html lang="en">
+  <head>
+    <!-- https://www.favicon-generator.org/ -->
+    <link rel="icon" type="image/x-icon" href="./asset/my_logo.png">
 
-  <meta name="description" content="Create alerts to receive notifications for downtime and performance issues.">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Robert Lau</title>
+    <meta name="description"
+      content="Beautiful software solutions for application development, deployment, monitoring, logging, and operations.">
+    <meta name="keywords"
+      content="software,website,uptime,monitoring,logging,log">
 
-  <meta property="og:title" content="Apex Software">
-  <meta property="og:url" content="https://apex.shalerts/">
-  <meta property="og:description"
-    content="Beautiful software solutions for monitoring, deploying, and operating websites, applications and APIs.">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1998">
-  <meta property="og:image:height" content="1894">
-  <meta property="og:image" content="https://apex-software.imgix.net/apex/marketing/cards/dark-type.png?auto=format">
+    <meta property="og:title" content="Robert Lau">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:description"
+      content="Beautiful software solutions for monitoring, deploying, and operating websites, applications and APIs.">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1998">
+    <meta property="og:image:height" content="1894">
+    <meta property="og:image"
+      content="https://example.com/image.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@tjholowaychuk">
-  <meta name="twitter:title" content="Apex Software">
-  <meta name="twitter:description"
-    content="Beautiful software solutions for monitoring, deploying, and operating websites, applications and APIs.">
-  <meta name="twitter:image"
-    content="https://apex-software.imgix.net/apex/marketing/cards/dark-type.png?auto=format&amp;w=800&amp;dpr=2">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yourtwitterhandle">
+    <meta name="twitter:title" content="Robert Lau">
+    <meta name="twitter:description"
+      content="Beautiful software solutions for monitoring, deploying, and operating websites, applications and APIs.">
+    <meta name="twitter:image"
+      content="https://example.com/image.png">
 
-  <link href="https://apex.shalerts/" rel="canonical">
-  <link rel="preconnect" href="https://apex-software.imgix.net/">
+    <link href="https://example.com/" rel="canonical">
+    <link rel="preconnect" href="https://example.com/">
 
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="57x57"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=57">
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="114x114"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=114">
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="72x72"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=72">
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="144x144"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=144">
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="60x60"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=60">
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="120x120"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=120">
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="76x76"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=76">
-  <link rel="apple-touch-icon-precomposed" importance="low" sizes="152x152"
-    href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=152">
-  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=196"
-    importance="low" sizes="196x196">
-  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=96"
-    importance="low" sizes="96x96">
-  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/32.png"
-    importance="low" sizes="32x32">
-  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/16.png"
-    importance="low" sizes="16x16">
-  <link rel="icon" type="image/png" href="https://apex-software.imgix.net/apex/site/favicons/light/196.png?w=128"
-    importance="low" sizes="128x128">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Home/index.css">
 
-  <link rel="stylesheet" type="text/css" href="share_asset/index.css">
-  <link rel="prefetch">
+    <link rel="prefetch">
 
-  <script>
-    function f(str) {
-      var sub_menu = document.getElementById(str);
-      // event.srcElement
-      var dis_v = sub_menu.style.display;
-      if (dis_v == "none")
-        sub_menu.style.display = "block";
-      else
-        sub_menu.style.display = "none";
-    }
-    function fb() {
-      var last_sub_menu;
-      var sub_menu = document.getElementById("一");
-      if (sub_menu != last_sub_menu) {
-        sub_menu.style.fontFamily = "黑体";
-        last_sub_menu.style.fontFamily = "not specified"
-        last_sub_menu = sub_menu;
+    <style>
+      body {
+        background:url("./asset/background.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
+        background-size:cover;  /* 让背景图基于容器大小伸缩 */
+        background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+        background-color:#CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
       }
-    }
-  </script>
+      h1 {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-size: 9em;
+        font-weight: 570;
+        margin-bottom: 0;
+        text-align: center;
+        color:rgb(255, 255, 255);
+      }
+      p {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-size: 4em;
+        font-weight: 570;
+        line-height: 1.4;
+        max-width: 28em;
+        text-align: center;
+        color:rgb(255, 255, 255);
+      }
+    </style>
+  </head>
 
-</head>
+  <body>
+    <header>
+      <!-- <div class="Logo" style="transform: scale(0.8); margin-left: -6px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="11">
+          <path
+            d="M 0.205 10.853 L 5.156 0.018 L 6.607 0.018 L 11.51 10.853 L 9.743 10.853 L 7.667 6.154 L 5.833 1.778 L 3.689 6.859 L 3.717 6.859 L 3.128 8.19 L 3.124 8.19 L 2.977 8.531 L 1.952 10.853 Z M 20.395 0.018 L 23.878 0.018 C 24.491 0.018 25.05 0.076 25.555 0.194 C 26.061 0.311 26.491 0.492 26.845 0.737 C 27.2 0.982 27.474 1.293 27.668 1.67 C 27.861 2.048 27.958 2.492 27.958 3.033 C 27.958 3.573 27.853 4.038 27.644 4.425 C 27.434 4.813 27.144 5.129 26.773 5.374 C 26.402 5.619 25.961 5.8 25.451 5.917 C 24.94 6.035 24.389 6.093 23.798 6.093 L 21.992 6.093 L 21.992 10.853 L 20.395 10.853 Z M 21.992 4.808 L 23.685 4.808 C 24.072 4.808 24.429 4.775 24.757 4.708 C 25.085 4.642 25.367 4.54 25.604 4.402 C 25.84 4.265 26.023 4.083 26.152 3.859 C 26.281 3.635 26.346 3.359 26.346 3.033 C 26.346 2.706 26.278 2.433 26.144 2.214 C 26.01 1.994 25.827 1.816 25.596 1.678 C 25.365 1.54 25.088 1.443 24.765 1.387 C 24.443 1.331 24.093 1.303 23.717 1.303 L 21.992 1.303 Z M 39.004 9.506 L 44.971 9.506 L 44.971 10.853 L 37.408 10.853 L 37.408 0.018 L 44.729 0.018 L 44.729 1.349 L 39.004 1.349 L 39.004 4.594 L 44.391 4.594 L 44.391 5.894 L 39.004 5.894 Z M 58.517 4.058 L 61.226 0.018 L 63.097 0.018 L 59.452 5.145 L 63.597 10.853 L 61.581 10.853 L 58.452 6.292 L 55.388 10.853 L 53.421 10.853 L 57.501 5.114 L 53.824 0.018 L 55.775 0.018 Z"
+            fill="rgba(0,0,0,1)"></path>
+        </svg>
+      </div> -->
 
-<body>
-  <header>
-    <div class="Logo">Tools</div>
+      <div>
+      </div>
 
-    <div class="Menu" onclick>Start
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
-      <div class="content">
-        <div class="container">
-          <div>
-          </div>
-          <div class="products">
-            <ul>
-              <li><a href="../index.html"><span class="name">Home</span></a></li>
-              <li><a href="../Document.html"><span class="name">Document</span></a></li>
-              <li><a href="../Blog.html"><span class="name">Blog</span></a></li>
-              <li><a href="../About me.html"><span class="name">About
-                    me</span></a></li>
-            </ul>
+      <div class="Menu" onclick>Start
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+        <div class="content">
+          <div class="container">
+            <div>
+            </div>
+            <div class="products">
+              <ul>
+                <li><a href="index.html"><span class="name">Home</span></a></li>
+                <li><a href="Document/index.html"><span class="name">Document</span></a></li>
+                <li><a href="Blog/index.html"><span class="name">Blog</span></a></li>
+                <li><a href="About me/index.html"><span class="name">About me</span></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="mb-30">
-    <div class="Documentation">
-      <div class="doc-nav">
-        <div class="Navigation left large a">
-          <ul>
-            <li><a id="一" href="#Alerting" class="expandable item active" onclick="f('1'),fb()">一</a>
-              <ul id="1" class="menu-sub" style="display:none">
-                <li><a href="#creating_an_alert" class="item">1</a></li>
-                <li><a href="#reducing_noise_from_alerts" class="item">2</a></li>
-                <li><a href="#" class="item">3</a></li>
-              </ul>
-            </li>
-            <li><a href="#Alerting" class="expandable item" onclick="f('2')">二</a>
-              <ul id="2" class="menu-sub" style="display:none">
-                <li><a href="#creating_an_alert" class="item">1</a></li>
-                <li><a href="#reducing_noise_from_alerts" class="item">2</a></li>
-                <li><a href="#" class="item">3</a></li>
-              </ul>
-            </li>
-          </ul>
+    <div class="container-2 mb-30">
 
-          <a href="https://apex.sh/docs/ping/" class="expandable item active">Alerting</a>
-          <a href="https://apex.sh/docs/ping/billing/" class="expandable item"><span>Billing</span></a>
-          <a href="https://apex.sh/docs/ping/monitoring/" class="expandable item"><span>Checks</span></a>
-          <a href="https://apex.sh/docs/ping/ssl/" class="expandable item"><span>SSL expiration</span></a>
-          <a href="https://apex.sh/docs/ping/status-pages/" class="expandable item"><span>Status pages</span></a>
-          <a href="https://apex.sh/docs/ping/teams/" class="expandable item"><span>Team management</span></a>
-          <a href="https://apex.sh/docs/ping/apdex/" class="expandable item"><span>Understanding Apdex</span></a>
-          <a href="https://apex.sh/docs/ping/webhooks/" class="expandable item"><span>Webhooks</span></a>
-          <a href="https://apex.sh/docs/ping/reporting/" class="expandable item"><span>Weekly reporting</span></a>
+      <div class="Section top fadenum" align="center">
+        <h1>Hello.</h1>
+        <p>My name is Robert Lau.</p>
+        <!-- <h2 class="mt-4" style="color:rgb(255, 255, 255);"></h2>
+        <p class="mt-6" style="color:rgb(255, 255, 255);">This is my blog.</p>
+        Our goal is to provide simple, beautiful, and effective software solutions your team will enjoy using. From performance and uptime monitoring to large scale log management, we have a variety of solutions to help make your products the best they can be.
+        <div class="Image mt-20 expand desktop shadow">
+          <img alt="Uptime monitoring dashboard" src="./asset/background.png">
+        </div> -->
+      </div>
+
+      <!-- <div class="Section">
+        <div class="subtitle">Ping</div>
+        <h3 class="mt-4">Powerful uptime monitoring for websites, applications and APIs.</h3>
+        <p class="mt-6">Uptime and performance monitoring with detailed reporting, flexible alerting, public status pages,
+          and more. Help keep your customers happy, reduce support, and improve SEO with a performant and highly available
+          website, application, or API.</p>
+        <p class="mt-6"></p><a href="https://apex.sh/ping/" class="Link large">View the product</a><p></p>
+
+        <div class="Image mt-20 expand desktop shadow">
+          <img alt="Uptime monitoring dashboard" src="./asset/listing.png">
         </div>
       </div>
 
-      <div class="content">
+      <div class="Section">
+        <div class="subtitle">Logs</div>
+        <h3 class="mt-4">Structured logging at any scale.</h3>
+        <p class="mt-6">Apex Logs provides your team with powerful structured and plain-text log management, featuring a rich query language, flexible alerting integrations, unlimited log retention, and pricing unmatched in the industry.</p>
+        <p class="mt-6"></p><a href="https://apex.sh/logs/" class="Link large">View the product</a><p></p>
 
-        <h1 class="Heading">Alerting</h1>
-        <div class="Markdown">
-          <p>This guide walks through the creation of alerts, which are used
-            to notify your team of downtime and performance issues.</p>
-          <h2 class="Heading">
-            <a class="Anchor" aria-hidden="true" id="creating_an_alert"
-              href="https://apex.sh/docs/ping/#creating_an_alert">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-link">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </a>
-            Creating an alert
-          </h2>
-          <p><a href="./Tools/batch_show_images.html">batch_show_images</a></p>
-
-          <p>Click the plus symbol on the page to view the alert creation
-            form. Select the type of action to perform from Slack, PagerDuty,
-            webhook request, or email as shown here:</p>
-          <div class="Image">
-            <img alt="Alert actions" src="../asset/action.png">
-          </div>
-          <p>Slack and PagerDuty integrations will redirect you to the
-            corresponding site to integrate, while webhooks require a value,
-            in this example the email(s) you’d like to notify:</p>
-          <div class="Image">
-            <img alt="Multiple emails" src="../asset/emails.png">
-          </div>
-          <p>Choose if the alert applies to every check, or a single
-            check.</p>
-          <div class="Image">
-            <img alt="Check selection" src="../asset/checklist.png">
-          </div>
-          <p>Select a metric to alert on, if your only concern is that the
-            website, API, or application is up then select “Downtime”. You may
-            wish to report on unresponsive endpoints using “Total Response
-            Time” as well.</p>
-          <div class="Image">
-            <img alt="Downtime and response time metrics" src="../asset/metric.png">
-          </div>
-          <p>Enter the number of minutes of downtime within the time window
-            (15 Minutes here) which is acceptable before triggering an alert.
-            Choosing this value depends greatly on the nature of your
-            service.</p>
-          <p>For less obtrusive actions such as Slack or email it may be fine
-            to trigger an alert when downtime is above a minute or two,
-            however triggering a PagerDuty for an intermittent problem is less
-            desirable.</p>
-          <div class="Image">
-            <img alt="Downtime configuration" src="../asset/value.png">
-          </div>
-
-          <p>Click save and you're good to go!</p>
-
-          <h2 class="Heading">
-            <a class="Anchor" aria-hidden="true" id="types_of_alerts" href="https://apex.sh/docs/ping/#types_of_alerts">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-link">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </a>Types of alerts
-          </h2>
-
-          <p>Apex Ping supports a variety of metrics to alert on. You’ll
-            likely want a “Downtime” and “Total Response Time” alert to ensure
-            availability and responsiveness. Some alerts such as “Total
-            Response Time” allow you to alert against stats such as min, max,
-            average or percentiles for additional control.</p>
-
-          <ul>
-            <li><strong>Total Response Time</strong>: Time taken to complete
-              the entire request</li>
-            <li><strong>Downtime</strong>: Approximate downtime in
-              minutes</li>
-            <li><strong>Apdex Score</strong>: Average <a href="https://en.wikipedia.org/wiki/Apdex">Apdex</a>
-              score</li>
-            <li><strong>Name Lookup Time</strong>: Time taken to perform DNS
-              lookup</li>
-            <li><strong>Connect Time</strong>: Time taken to establish TCP
-              connection</li>
-            <li><strong>Redirect Time</strong>: Time taken to perform
-              redirect(s)</li>
-            <li><strong>TLS Handshake Time</strong>: Time taken to negotiate
-              the secure connection handshake</li>
-            <li><strong>Response Time</strong>: Time taken for the server to
-              respond, excluding connection latency</li>
-            <li><strong>Header Size</strong>: Response header size in
-              bytes</li>
-            <li><strong>Body Size</strong>: Response body size in bytes</li>
-          </ul>
-
-          <h2 class="Heading"><a class="Anchor" aria-hidden="true" id="reducing_noise_from_alerts"
-              href="https://apex.sh/docs/ping/#reducing_noise_from_alerts">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-link">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </a>Reducing noise from alerts</h2>
-
-          <p>If you’re receiving too many notifications, you may want to
-            consider increasing the threshold and alert window — let’s look at
-            a few examples.</p>
-
-          <p>The most sensitive alert possible would be: <code>Downtime is
-            above 0 minutes in the past 5 minutes</code>, notifying you as
-            soon as a single error is detected, remaining triggered until 5
-            minutes of uptime is seen by the alerting system, after which it
-            may trigger again.</p>
-
-          <p>To decrease the sensitivity you could try <code>Downtime is above
-                3 in the past 5 minutes</code>, triggering after 3 uptime
-            confirmations have failed.</p>
-
-          <p>Alternatively, the alert window may be increased to lower the
-            frequency of resolving, for example, the configuration
-            <code>Downtime is above 0 minutes in the past 60 minutes</code>
-            will trigger immediately, resolving after observing 60 minutes of
-            uptime, resulting in fewer notifications.
-          </p>
-
-          <h2 class="Heading"><a class="Anchor" aria-hidden="true" id="how_downtime_confirmation_works"
-              href="https://apex.sh/docs/ping/#how_downtime_confirmation_works">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-link">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </a>How downtime confirmation works</h2>
-
-          <p>Apex Ping currently confirms downtime in three additional
-            locations to ensure that the failure is not intermittent. This
-            helps reduce false-positives, however it’s important to note that
-            a single “minute” of downtime is effectively equivalent to four
-            HTTP requests failing.</p>
-
-          <p>Requests which take longer than 10 seconds time out, and are
-            treated as errors which contribute to downtime.</p>
-
-          <h2 class="Heading"><a class="Anchor" aria-hidden="true" id="alert_email_delivery"
-              href="https://apex.sh/docs/ping/#alert_email_delivery">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-link">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </a>Alert email delivery</h2>
-
-          <p>Alert emails are delivered from the alerts@apex.sh address,
-            subjects are formatted as follows, which may be useful for
-            integration with services such as <a href="https://www.opsgenie.com/">OpsGenie</a>:</p>
-
-          <ul>
-            <li>[triggered] tjholowaychuk.com: Downtime is above one
-              minute.</li>
-            <li>[resolved] tjholowaychuk.com: Downtime is no longer above one
-              minute.</li>
-          </ul>
+        <div class="Image mt-20 expand desktop">
+          <img alt="Structured log management dashboard" src="./asset/themes-3.png">
         </div>
+      </div>
 
-        <div class="flex mt-24">
-          <a class="PageLink next" href="https://apex.sh/docs/ping/billing/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-            <div class="info">
-              <div class="direction">Next</div>
-              <div class="name">Billing</div>
+      <div class="Section">
+        <div class="subtitle">Up</div>
+        <h3 class="mt-4">Serverless applications in seconds, in your own AWS account.</h3>
+        <p class="mt-6">Deploy infinitely scalable serverless applications, APIs, and sites in seconds with a single
+          command. Bring a Heroku-style user experience to your own AWS account, save time, money, and get back to work
+          on what makes your product unique.</p>
+          <p class="mt-6"></p><a href="https://apex.sh/up/" class="Link large">View the product</a><p></p>
+
+        <div class="Image mt-20 expand desktop shadow terminal">
+          <img alt="Serverless application upload to AWS" src="./asset/upload-2.png">
+        </div>
+      </div> -->
+
+      <div class="Section">
+        <!-- <div class="subtitle">Customers</div>
+        <h3 class="mt-4">Take a look at just a few of our thousands of happy customers.</h3>
+        <p class="mt-6">We help thousands of companies from all over the globe create the best products they can — from enterprise corporations, venture-backed startups, to bootstrapped companies, we love creating products you'll enjoy.</p> -->
+
+        <div class="Customers mt-4">
+          <a href="https://www.facebook.com/chenyu.liu.357" target="_blank">
+            <div class="customer" align="center">
+              <img importance="low" src="./asset/facebook.svg"
+                alt="facebook logo">
+            </div>
+          </a>
+
+          <a href="https://twitter.com/CYLcy666" target="_blank">
+            <div class="customer" align="center">
+              <img importance="low" src="./asset/twitter.svg"
+                alt="twitter logo">
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/_robert_lau_/" target="_blank">
+            <div class="customer" align="center">
+              <img importance="low" src="./asset/instagram.svg"
+                alt="instgram logo">
+            </div>
+          </a>
+
+          <a href="https://github.com/RobertLau666" target="_blank">
+            <div class="customer" align="center">
+              <img importance="low" src="./asset/github.svg" alt="github logo">
             </div>
           </a>
         </div>
       </div>
-      <div class="page-nav">
+
+      <div class="Section button flex flex-center">
+        <a href="mailto:1245725448@qq.com" class="Button dark">Get In Touch</a>
       </div>
+
+      <!-- <footer>
+        <a href="mailto:hello@apex.sh">Contact</a>
+        <a href="http://status.apex.sh/">Status</a>
+        <a href="https://chat.apex.sh/">Slack</a>
+        <a href="https://twitter.com/tjholowaychuk">Twitter</a>
+        <a href="https://apex.sh/terms/">Terms</a>
+        <a href="https://apex.sh/privacy/">Privacy</a>
+      </footer> -->
+
     </div>
-  </div>
-  <script importance="low" src="share_asset/index.js"></script>
-</body>
+
+    <script importance="low" src="Home/index.js"></script>
+
+  </body>
 </html>
