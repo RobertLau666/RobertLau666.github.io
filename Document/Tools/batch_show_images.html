@@ -123,29 +123,40 @@
 
     /* --- 修改后的侧边预览样式 (移除背景、边框、阴影、内边距) --- */
     #preview-panel {
-      display: none; /* 默认隐藏 */
-      position: fixed; /* 使用 fixed 定位相对于视口 */
-      width: 800px; /* 4倍面积 (原400x400) */
+      display: none;
+      /* 默认隐藏 */
+      position: fixed;
+      /* 使用 fixed 定位相对于视口 */
+      width: 800px;
+      /* 4倍面积 (原400x400) */
       height: 800px;
-      /* background-color: transparent; */ /* 移除背景色 */
-      /* border: none; */ /* 移除边框 */
-      /* border-radius: 0; */ /* 移除圆角 */
+      /* background-color: transparent; */
+      /* 移除背景色 */
+      /* border: none; */
+      /* 移除边框 */
+      /* border-radius: 0; */
+      /* 移除圆角 */
       z-index: 999;
-      /* padding: 0; */ /* 移除内边距 */
-      /* box-shadow: none; */ /* 移除阴影 */
+      /* padding: 0; */
+      /* 移除内边距 */
+      /* box-shadow: none; */
+      /* 移除阴影 */
       justify-content: center;
       align-items: center;
-      overflow: hidden; /* 防止图片超出容器 */
+      overflow: hidden;
+      /* 防止图片超出容器 */
     }
 
     #preview-image {
       max-width: 100%;
       max-height: 100%;
-      object-fit: contain; /* 保持图片比例，完整显示 */
-      /* border-radius: 0; */ /* 移除圆角 */
+      object-fit: contain;
+      /* 保持图片比例，完整显示 */
+      /* border-radius: 0; */
+      /* 移除圆角 */
     }
-    /* --- 样式结束 --- */
 
+    /* --- 样式结束 --- */
   </style>
 </head>
 
@@ -287,10 +298,10 @@
             left = PREVIEW_MARGIN; // 贴左边
           }
         } else {
-            // 如果右边能放下，但图片太靠右导致预览框右侧超出，则调整
-            if (left + PREVIEW_WIDTH > viewportW - PREVIEW_MARGIN) {
-                left = viewportW - PREVIEW_WIDTH - PREVIEW_MARGIN;
-            }
+          // 如果右边能放下，但图片太靠右导致预览框右侧超出，则调整
+          if (left + PREVIEW_WIDTH > viewportW - PREVIEW_MARGIN) {
+            left = viewportW - PREVIEW_WIDTH - PREVIEW_MARGIN;
+          }
         }
 
 

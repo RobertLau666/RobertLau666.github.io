@@ -47,25 +47,74 @@
         background-size:cover;  /* 让背景图基于容器大小伸缩 */
         background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
         background-color:#CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
+        overflow-x: hidden; /* 防止因为字体过大出现水平滚动条 */
       }
       h1 {
         font-family: 'Rubik';
         font-style: normal;
-        font-size: 4.5em;
+        font-size: 9em;
         font-weight: 570;
         margin-bottom: 0;
         text-align: center;
         color:rgb(255, 255, 255);
+        
+        /* 打破父容器限制 */
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        position: relative;
       }
       p {
         font-family: 'Rubik';
         font-style: normal;
-        font-size: 2.5em;
+        font-size: 5em;
         font-weight: 570;
         line-height: 1.4;
-        max-width: 28em;
+        max-width: none;
+        white-space: nowrap; 
         text-align: center;
         color:rgb(255, 255, 255);
+
+        /* 打破父容器限制 */
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        position: relative;
+      }
+
+      /* --- 底部图标样式 --- */
+      .Customers {
+        display: flex;             /* 开启弹性布局 */
+        justify-content: center;   /* 整体居中显示 */
+        align-items: center;       /* 垂直居中 */
+        gap: 200px;                 /* 图标之间的间距，可根据需要调整 */
+        width: 100vw;              /* 确保容器宽度足够 */
+        margin-left: calc(50% - 50vw); /* 同样打破可能的父容器限制，保持居中 */
+      }
+
+      .Customers a {
+        display: block;            
+        width: auto;              
+        height: auto;              
+        text-decoration: none;     
+        /* 移除可能导致点击范围扩大的内边距 */
+        padding: 0;
+        margin: 0;
+      }
+
+      .Customers .customer {
+        width: auto !important;    
+        margin: 0 !important;      
+        display: block;
+        padding: 0;
+      }
+      
+      .Customers img {
+        display: block; 
+        /* --- 核心修改：强制指定图标大小 --- */
+        width: 40px;       /* 这里的数值可以按需调整，比如 50px */
+        height: 40px;
+        object-fit: contain; /* 保持图片比例，防止变形 */
       }
     </style>
   </head>
