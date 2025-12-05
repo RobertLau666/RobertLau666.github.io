@@ -43,94 +43,29 @@
 
     <style>
       body {
-        background:url("./asset/background.png")  no-repeat center center;
-        background-size:cover;
-        background-attachment:fixed;
-        background-color:#CCCCCC;
-        overflow-x: hidden; /* 核心：禁止水平滚动条 */
-        width: 100%;        /* 确保body不超过视口 */
+        background:url("./asset/background.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
+        background-size:cover;  /* 让背景图基于容器大小伸缩 */
+        background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+        background-color:#CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
       }
-      
-      /* --- 电脑端/默认样式 (你之前要求的巨大尺寸) --- */
       h1 {
         font-family: 'Rubik';
         font-style: normal;
-        font-size: 9em;
+        font-size: 4.5em;
         font-weight: 570;
         margin-bottom: 0;
         text-align: center;
         color:rgb(255, 255, 255);
-        
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-        position: relative;
       }
       p {
         font-family: 'Rubik';
         font-style: normal;
-        font-size: 5em;
+        font-size: 2.5em;
         font-weight: 570;
         line-height: 1.4;
-        max-width: none;
-        white-space: nowrap; 
+        max-width: 28em;
         text-align: center;
         color:rgb(255, 255, 255);
-
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-        position: relative;
-      }
-
-      .Customers {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 200px;           /* 电脑端的大间距 */
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-      }
-
-      .Customers a, .Customers .customer {
-        display: block;            
-        width: auto !important;              
-        height: auto;              
-        text-decoration: none;     
-        padding: 0;
-        margin: 0 !important;
-      }
-      
-      .Customers img {
-        display: block; 
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-      }
-
-      /* --- 手机端自适应 (Media Query) --- */
-      /* 当屏幕宽度小于 768px (手机/平板竖屏) 时，应用以下规则 */
-      @media screen and (max-width: 768px) {
-        
-        h1 {
-          /* 使用 vw (viewport width) 单位，让字体随屏幕宽度自动缩放 */
-          /* 25vw 意味着字体大小是屏幕宽度的 25%，保证 Hello. 不会换行 */
-          font-size: 25vw; 
-        }
-
-        p {
-          /* 调整长文本的大小，防止超出屏幕 */
-          font-size: 8vw;
-        }
-
-        .Customers {
-          /* 手机上间距改为 30px (原200px在手机上绝对放不下) */
-          gap: 30px; 
-          
-          /* 如果屏幕实在太小(如iPhone SE)，允许折行，避免图标消失 */
-          /* 如果你坚持在手机上也必须一行，可以把 gap 改得更小，比如 15px */
-          flex-wrap: wrap; 
-        }
       }
     </style>
   </head>
