@@ -99,10 +99,9 @@
           <div class="products">
             <ul>
               <li><a href="../index.html"><span class="name">Home</span></a></li>
-              <li><a href="../Document.html"><span class="name">Document</span></a></li>
+              <li><a href="../Document/index.html"><span class="name">Document</span></a></li>
               <li><a href="../Blog/index.html"><span class="name">Blog</span></a></li>
-              <li><a href="../About me/index.html"><span class="name">About
-                    me</span></a></li>
+              <li><a href="../About me/index.html"><span class="name">About me</span></a></li>
             </ul>
           </div>
         </div>
@@ -114,44 +113,26 @@
     <div class="Documentation">
       <div class="doc-nav">
         <div class="Navigation left large a">
-          <ul>
-            <li><a id="一" href="#Alerting" class="expandable item active" onclick="f('1'),fb()">一</a>
-              <ul id="1" class="menu-sub" style="display:none">
-                <li><a href="#creating_an_alert" class="item">1</a></li>
-                <li><a href="#reducing_noise_from_alerts" class="item">2</a></li>
-                <li><a href="#" class="item">3</a></li>
-              </ul>
-            </li>
-            <li><a href="#Alerting" class="expandable item" onclick="f('2')">二</a>
-              <ul id="2" class="menu-sub" style="display:none">
-                <li><a href="#creating_an_alert" class="item">1</a></li>
-                <li><a href="#reducing_noise_from_alerts" class="item">2</a></li>
-                <li><a href="#" class="item">3</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <a href="https://apex.sh/docs/ping/" class="expandable item active">Alerting</a>
-          <a href="https://apex.sh/docs/ping/billing/" class="expandable item"><span>Billing</span></a>
-          <a href="https://apex.sh/docs/ping/monitoring/" class="expandable item"><span>Checks</span></a>
-          <a href="https://apex.sh/docs/ping/ssl/" class="expandable item"><span>SSL expiration</span></a>
-          <a href="https://apex.sh/docs/ping/status-pages/" class="expandable item"><span>Status pages</span></a>
-          <a href="https://apex.sh/docs/ping/teams/" class="expandable item"><span>Team management</span></a>
-          <a href="https://apex.sh/docs/ping/apdex/" class="expandable item"><span>Understanding Apdex</span></a>
-          <a href="https://apex.sh/docs/ping/webhooks/" class="expandable item"><span>Webhooks</span></a>
-          <a href="https://apex.sh/docs/ping/reporting/" class="expandable item"><span>Weekly reporting</span></a>
+          <a href="#Alerting" class="expandable item active">Alerting</a>
+          <a href="#Creating an alert" class="expandable item"><span>Creating an alert</span></a>
+          <a href="#Types of alerts" class="expandable item"><span>Types of alerts</span></a>
+          <a href="#Reducing noise from alerts" class="expandable item"><span>Reducing noise from alerts</span></a>
+          <a href="#How downtime confirmation works" class="expandable item"><span>How downtime confirmation
+              works</span></a>
+          <a href="#Alert email delivery" class="expandable item"><span>Alert email delivery</span></a>
         </div>
       </div>
 
       <div class="content">
-
-        <h1 class="Heading">Alerting</h1>
         <div class="Markdown">
-          <p>This guide walks through the creation of alerts, which are used
-            to notify your team of downtime and performance issues.</p>
-          <h2 class="Heading">
-            <a class="Anchor" aria-hidden="true" id="creating_an_alert"
-              href="https://apex.sh/docs/ping/#creating_an_alert">
+
+          <h1 class="Heading" id="Alerting">Alerting</h1>
+          <p>This guide walks through the creation of alerts, which are used to notify your team of downtime and
+            performance issues.</p>
+
+
+          <h2 class="Heading" id="Creating an alert">
+            <a class="Anchor" aria-hidden="true" href="https://apex.sh/docs/ping/#creating_an_alert">
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-link">
@@ -165,25 +146,25 @@
             form. Select the type of action to perform from Slack, PagerDuty,
             webhook request, or email as shown here:</p>
           <div class="Image">
-            <img alt="Alert actions" src="../asset/action.png">
+            <img alt="Alert actions" src="../asset/Document/Knowledge system/action.png">
           </div>
           <p>Slack and PagerDuty integrations will redirect you to the
             corresponding site to integrate, while webhooks require a value,
             in this example the email(s) you’d like to notify:</p>
           <div class="Image">
-            <img alt="Multiple emails" src="../asset/emails.png">
+            <img alt="Multiple emails" src="../asset/Document/Knowledge system/emails.png">
           </div>
           <p>Choose if the alert applies to every check, or a single
             check.</p>
           <div class="Image">
-            <img alt="Check selection" src="../asset/checklist.png">
+            <img alt="Check selection" src="../asset/Document/Knowledge system/checklist.png">
           </div>
           <p>Select a metric to alert on, if your only concern is that the
             website, API, or application is up then select “Downtime”. You may
             wish to report on unresponsive endpoints using “Total Response
             Time” as well.</p>
           <div class="Image">
-            <img alt="Downtime and response time metrics" src="../asset/metric.png">
+            <img alt="Downtime and response time metrics" src="../asset/Document/Knowledge system/metric.png">
           </div>
           <p>Enter the number of minutes of downtime within the time window
             (15 Minutes here) which is acceptable before triggering an alert.
@@ -194,12 +175,14 @@
             however triggering a PagerDuty for an intermittent problem is less
             desirable.</p>
           <div class="Image">
-            <img alt="Downtime configuration" src="../asset/value.png">
+            <img alt="Downtime configuration" src="../asset/Document/Knowledge system/value.png">
           </div>
-
           <p>Click save and you're good to go!</p>
 
-          <h2 class="Heading">
+
+
+
+          <h2 class="Heading" id="Types of alerts">
             <a class="Anchor" aria-hidden="true" id="types_of_alerts" href="https://apex.sh/docs/ping/#types_of_alerts">
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -209,13 +192,11 @@
               </svg>
             </a>Types of alerts
           </h2>
-
           <p>Apex Ping supports a variety of metrics to alert on. You’ll
             likely want a “Downtime” and “Total Response Time” alert to ensure
             availability and responsiveness. Some alerts such as “Total
             Response Time” allow you to alert against stats such as min, max,
             average or percentiles for additional control.</p>
-
           <ul>
             <li><strong>Total Response Time</strong>: Time taken to complete
               the entire request</li>
@@ -238,15 +219,19 @@
             <li><strong>Body Size</strong>: Response body size in bytes</li>
           </ul>
 
-          <h2 class="Heading"><a class="Anchor" aria-hidden="true" id="reducing_noise_from_alerts"
-              href="https://apex.sh/docs/ping/#reducing_noise_from_alerts">
+
+
+
+          <h2 class="Heading" id="Reducing noise from alerts">
+            <a class="Anchor" aria-hidden="true" href="https://apex.sh/docs/ping/#reducing_noise_from_alerts">
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-link">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
               </svg>
-            </a>Reducing noise from alerts</h2>
+            </a>Reducing noise from alerts
+          </h2>
 
           <p>If you’re receiving too many notifications, you may want to
             consider increasing the threshold and alert window — let’s look at
@@ -269,15 +254,19 @@
             uptime, resulting in fewer notifications.
           </p>
 
-          <h2 class="Heading"><a class="Anchor" aria-hidden="true" id="how_downtime_confirmation_works"
-              href="https://apex.sh/docs/ping/#how_downtime_confirmation_works">
+
+
+
+          <h2 class="Heading" id="How downtime confirmation works">
+            <a class="Anchor" aria-hidden="true" href="https://apex.sh/docs/ping/#how_downtime_confirmation_works">
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-link">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
               </svg>
-            </a>How downtime confirmation works</h2>
+            </a>How downtime confirmation works
+          </h2>
 
           <p>Apex Ping currently confirms downtime in three additional
             locations to ensure that the failure is not intermittent. This
@@ -288,20 +277,22 @@
           <p>Requests which take longer than 10 seconds time out, and are
             treated as errors which contribute to downtime.</p>
 
-          <h2 class="Heading"><a class="Anchor" aria-hidden="true" id="alert_email_delivery"
-              href="https://apex.sh/docs/ping/#alert_email_delivery">
+
+
+
+          <h2 class="Heading" id="Alert email delivery">
+            <a class="Anchor" aria-hidden="true" href="https://apex.sh/docs/ping/#alert_email_delivery">
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-link">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
               </svg>
-            </a>Alert email delivery</h2>
-
+            </a>Alert email delivery
+          </h2>
           <p>Alert emails are delivered from the alerts@apex.sh address,
             subjects are formatted as follows, which may be useful for
             integration with services such as <a href="https://www.opsgenie.com/">OpsGenie</a>:</p>
-
           <ul>
             <li>[triggered] tjholowaychuk.com: Downtime is above one
               minute.</li>
@@ -309,6 +300,12 @@
               minute.</li>
           </ul>
         </div>
+
+
+
+
+
+
 
         <div class="flex mt-24">
           <a class="PageLink next" href="https://apex.sh/docs/ping/billing/">
