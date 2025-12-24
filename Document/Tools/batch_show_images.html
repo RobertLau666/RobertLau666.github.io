@@ -162,16 +162,16 @@
 
 <body>
   <h1>批量展示图片</h1>
-  <p>在下方粘贴图片 URL，每行一个：</p>
-  <textarea id="imageUrls" placeholder="输入图片 URL，每行一个"></textarea>
+  <!-- <p>在下方粘贴图片URL，每行一个：</p> -->
+  <textarea id="imageUrls" placeholder="输入图片 URL (.jpg, .webp 等)，每行一个&#10;例如: https://example.com/image.jpg"></textarea>
   <div>
-    <button id="displayImagesBtn">展示图片</button>
+    <button id="displayImagesBtn">全部展示</button>
     <button id="displayUniqueImagesBtn">去重展示</button>
     <button id="copySelectedUrlsBtn">批量拷贝</button>
     <button id="downloadSelectedImagesBtn">批量下载</button>
-    <button id="copyAnnotatedUrlsABtn">复制标注为 A 的 URL</button>
-    <button id="copyAnnotatedUrlsBBtn">复制标注为 B 的 URL</button>
-    <button id="copyAnnotatedUrlsCBtn">复制标注为 C 的 URL</button>
+    <button id="copyAnnotatedUrlsABtn">复制标 A 的URL</button>
+    <button id="copyAnnotatedUrlsBBtn">复制标 B 的URL</button>
+    <button id="copyAnnotatedUrlsCBtn">复制标 C 的URL</button>
   </div>
   <div id="gallery"></div>
 
@@ -338,7 +338,7 @@
 
         ['A', 'B', 'C'].forEach(label => {
           const button = document.createElement('button');
-          button.textContent = `标注为 ${label}`;
+          button.textContent = `标 ${label}`;
           button.onclick = () => {
             annotations[url] = label;
             updateAnnotationButtons(annotationContainer, label);
@@ -364,12 +364,12 @@
       async function copyAnnotatedUrls(label) {
         const urls = Object.keys(annotations).filter(url => annotations[url] === label);
         if (urls.length === 0) {
-          alert(`没有标注为 ${label} 的图片！`);
+          alert(`没有标 ${label} 的图片！`);
           return;
         }
         try {
           await navigator.clipboard.writeText(urls.join('\n'));
-          alert(`标注为 ${label} 的图片 URL 已复制！`);
+          alert(`标 ${label} 的图片 URL 已复制！`);
         } catch (err) {
           alert('拷贝失败，请重试！');
         }

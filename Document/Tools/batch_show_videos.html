@@ -159,14 +159,14 @@
 
 <body>
   <h1>批量展示视频</h1>
-  <p>在下方粘贴视频 URL (.mp4, .webm 等)，每行一个：</p>
-  <textarea id="videoUrls" placeholder="输入视频 URL，每行一个&#10;例如: https://example.com/video.mp4"></textarea>
+  <!-- <p>在下方粘贴视频 URL (.mp4, .webm 等)，每行一个：</p> -->
+  <textarea id="videoUrls" placeholder="输入视频 URL (.mp4, .webm 等)，每行一个&#10;例如: https://example.com/video.mp4"></textarea>
   <div>
-    <button id="displayVideosBtn">展示视频</button>
+    <button id="displayVideosBtn">全部展示</button>
     <button id="displayUniqueVideosBtn">去重展示</button>
-    <button id="copyAnnotatedUrlsABtn">复制标注 A</button>
-    <button id="copyAnnotatedUrlsBBtn">复制标注 B</button>
-    <button id="copyAnnotatedUrlsCBtn">复制标注 C</button>
+    <button id="copyAnnotatedUrlsABtn">复制标 A 的URL</button>
+    <button id="copyAnnotatedUrlsBBtn">复制标 B 的URL</button>
+    <button id="copyAnnotatedUrlsCBtn">复制标 C 的URL</button>
   </div>
   <div id="gallery"></div>
 
@@ -334,12 +334,12 @@
       async function copyAnnotatedUrls(label) {
         const urls = Object.keys(annotations).filter(url => annotations[url] === label);
         if (urls.length === 0) {
-          alert(`没有标注为 ${label} 的视频！`);
+          alert(`没有标 ${label} 的视频！`);
           return;
         }
         try {
           await navigator.clipboard.writeText(urls.join('\n'));
-          alert(`标注为 ${label} 的视频 URL 已复制！(${urls.length} 个)`);
+          alert(`标 ${label} 的视频 URL 已复制！(${urls.length} 个)`);
         } catch (err) {
           alert('拷贝失败，请重试！');
         }
